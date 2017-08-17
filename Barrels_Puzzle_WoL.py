@@ -1,4 +1,5 @@
 #Barrels_and_Dials.py
+import copy
 
 NUM_BARRELS = 3
 MIN_VALUE = 1
@@ -29,8 +30,7 @@ def increment_barrel(b, brls):
         return brls
     if brls[b] == MAX_VALUE:
         return brls
-    new = []
-    new = [brls[0], brls[1], brls[2]]
+    new = copy.copy(brls)
     for i in range(len(brls)):
         if i == b:
             pass
